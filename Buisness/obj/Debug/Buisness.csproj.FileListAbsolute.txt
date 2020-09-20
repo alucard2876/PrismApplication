@@ -1,0 +1,13 @@
+C:\Users\vlad_\source\repos\WpfApp1\Buisness\bin\Debug\Buisness.dll
+C:\Users\vlad_\source\repos\WpfApp1\Buisness\bin\Debug\Buisness.pdb
+C:\Users\vlad_\source\repos\WpfApp1\Buisness\obj\Debug\Buisness.csproj.CoreCompileInputs.cache
+C:\Users\vlad_\source\repos\WpfApp1\Buisness\obj\Debug\Buisness.dll
+C:\Users\vlad_\source\repos\WpfApp1\Buisness\obj\Debug\Buisness.pdb
+C:\Users\vlad_\source\repos\WpfApp1\Buisness\obj\Debug\Buisness.csprojAssemblyReference.cache
+C:\Users\vlad_\source\repos\WpfApp1\Buisness\bin\Debug\Domain.dll
+C:\Users\vlad_\source\repos\WpfApp1\Buisness\bin\Debug\Prism.dll
+C:\Users\vlad_\source\repos\WpfApp1\Buisness\bin\Debug\Domain.pdb
+C:\Users\vlad_\source\repos\WpfApp1\Buisness\bin\Debug\Prism.xml
+C:\Users\vlad_\source\repos\WpfApp1\Buisness\obj\Debug\Buisness.csproj.CopyComplete
+C:\Users\vlad_\source\repos\WpfApp1\Buisness\bin\Debug\Buisness.dll.config
+C:\Users\vlad_\source\repos\WpfApp1\Buisness\bin\Debug\Domain.dll.config

@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="MyModule.Views.MyModule"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:mvvm="http://prismlibrary.com/"
+              Background="{DynamicResource MaterialDesignPaper}"
+            FontFamily="{DynamicResource MaterialDesignFont}"
+             mvvm:ViewModelLocator.AutoWireViewModel="True"
+             Height="300" Width="200" >
+    <Grid Width="200" Height="300" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListBox ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategorie}">
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" Margin="5">
+                        <TextBlock FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Left" Text="{Binding CategoryTitle}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+
+        </ListBox>
+        <Button Grid.Row="1" Background="#FF154765" Content="Clear" Command="{Binding ClearCategoryCommand}" Height="25" Width="100"></Button>
+    </Grid>
+</UserControl>

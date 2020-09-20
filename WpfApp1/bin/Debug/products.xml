@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Product>
+    <Id>0</Id>
+    <Title>Jameson</Title>
+    <Description>Great Irish whiskey</Description>
+    <Coast>600</Coast>
+    <CategoryId>0</CategoryId>
+    <Category>
+      <Id>0</Id>
+      <CategoryTitle>Whiskey</CategoryTitle>
+    </Category>
+  </Product>
+  <Product>
+    <Id>2</Id>
+    <Title>Balentise</Title>
+    <Description>American whiskey</Description>
+    <Coast>400</Coast>
+    <CategoryId>0</CategoryId>
+    <Category>
+      <Id>0</Id>
+      <CategoryTitle>Whiskey</CategoryTitle>
+    </Category>
+  </Product>
+  <Product>
+    <Id>4</Id>
+    <Title>Guiness</Title>
+    <Description>Great beer</Description>
+    <Coast>35</Coast>
+    <CategoryId>1</CategoryId>
+    <Category>
+      <Id>1</Id>
+      <CategoryTitle>Beer</CategoryTitle>
+    </Category>
+  </Product>
+  <Product>
+    <Id>6</Id>
+    <Title>Absolute</Title>
+    <Description>Absolutley vodka</Description>
+    <Coast>666</Coast>
+    <CategoryId>2</CategoryId>
+    <Category>
+      <Id>2</Id>
+      <CategoryTitle>Vodka</CategoryTitle>
+    </Category>
+  </Product>
+  <Product>
+    <Id>23</Id>
+    <Title>Corona</Title>
+    <Description>Batter with lime</Description>
+    <Coast>24</Coast>
+    <CategoryId>1</CategoryId>
+    <Category>
+      <Id>1</Id>
+      <CategoryTitle>Beer</CategoryTitle>
+    </Category>
+  </Product>
+</ArrayOfProduct>

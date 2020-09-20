@@ -1,0 +1,43 @@
+﻿<Window x:Class="PrismApplication.Views.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrismApplication.Views"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d"
+        Title="{Binding Title}" Height="450" Width="1000" WindowStyle="None" WindowState="Minimized">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" Background="#FF0072B7">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Title" Margin="10" FontSize="18" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center"></TextBlock>
+                <Button Grid.Column="1" HorizontalAlignment="Right" Background="#FFDD113D" Command="{Binding CloseApplicationCommand}">
+                    <Button.Content>
+                        <materialDesign:PackIcon Kind="Close"></materialDesign:PackIcon>
+                    </Button.Content>
+                </Button>
+            </Grid>
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ItemsControl Margin="10" HorizontalContentAlignment="Stretch"  Grid.Column="0" VerticalContentAlignment="Top" HorizontalAlignment="Center"  prism:RegionManager.RegionName="MyModule"></ItemsControl>
+            <ItemsControl HorizontalAlignment="Stretch"  prism:RegionManager.RegionName="CatalogModule" Grid.Column="1" Grid.Row="0" Margin="5"></ItemsControl>
+            <ItemsControl HorizontalAlignment="Stretch" VerticalAlignment="Center"  prism:RegionManager.RegionName="CreationProductModule" Grid.Column="1" Grid.Row="1"></ItemsControl>
+        </Grid>
+    </StackPanel>
+</Window>

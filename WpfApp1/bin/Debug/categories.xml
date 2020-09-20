@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfCategory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Category>
+    <Id>0</Id>
+    <CategoryTitle>Whiskey</CategoryTitle>
+  </Category>
+  <Category>
+    <Id>1</Id>
+    <CategoryTitle>Beer</CategoryTitle>
+  </Category>
+  <Category>
+    <Id>2</Id>
+    <CategoryTitle>Vodka</CategoryTitle>
+  </Category>
+</ArrayOfCategory>

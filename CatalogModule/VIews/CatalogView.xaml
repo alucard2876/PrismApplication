@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="CatalogModule.Views.CatalogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="600">
+    <StackPanel Height="300" Width="600" Background="White">
+        <Popup IsOpen="{Binding IsVisible,UpdateSourceTrigger=PropertyChanged}" StaysOpen="True" Placement="Center">
+            
+            <StackPanel Orientation="Vertical" Background="White" Width="200" Height="100">
+                <StackPanel Orientation="Vertical" Height="30" VerticalAlignment="Top" Width="200" Background="#FF0072B7">
+                    <Button Content="Close" Background="#FFDD113D" HorizontalAlignment="Right" Command="{Binding ClosePopup}"></Button>
+                </StackPanel>
+                <TextBlock Text="Maybe you must select Product?" Margin="0,0,10,0" VerticalAlignment="Bottom" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Popup>
+        <ListBox x:Name="Box" HorizontalContentAlignment="Left" Width="600" ItemsSource="{Binding Products}" SelectedItem="{Binding CurrentProduct}" >
+           
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"></StackPanel>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+    
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="250" Width="100" Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <RowDefinition Height="100"></RowDefinition>
+                            <RowDefinition Height="30"></RowDefinition>
+                            <RowDefinition Height="30"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding Title}" FontSize="15" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="1" TextAlignment="Justify" Margin="0,15,0,0" Text="{Binding Description}" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="2" Text="{Binding Coast}" VerticalAlignment="Center"></TextBlock>
+                        <Button Grid.Column="0" Grid.Row="3" Content="Delete" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListBox}}, Path=DataContext.RemoveCommand}" CommandParameter="{Binding Id}" VerticalAlignment="Bottom" Background="#FF154765"></Button>
+                    </Grid>
+
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <!--<ListBox.ItemTemplate>
+                <DataTemplate>
+
+                    <StackPanel  Width="150" Height="200" Orientation="Vertical" Background="Gray">
+                        <TextBlock Visibility="Hidden" Text="{Binding Id}"></TextBlock>
+                        <TextBlock FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5" Text="{Binding Title}"></TextBlock>
+                        <TextBlock FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5" Text="{Binding Description}"></TextBlock>
+                        <Button Content="Delete" 
+                                Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListBox}}, Path=DataContext.RemoveCommand}" 
+                                CommandParameter="{Binding Id}"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Bottom"
+                                Margin="5"
+                                Width="100"
+                                Height="30"
+                                    ></Button>
+                    </StackPanel>
+
+                </DataTemplate>
+            </ListBox.ItemTemplate>-->
+
+        </ListBox>
+    </StackPanel>
+</UserControl>
